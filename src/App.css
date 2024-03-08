@@ -1,0 +1,93 @@
+h1 {
+    margin-left:80px;
+}
+
+h4 {
+    margin: 0px;
+    padding: 5px;
+    padding-left: 0px;
+    font-family: sans-serif;
+    color: white;
+}
+
+h5 {
+    margin: 0px;
+    padding: 5px;
+    font-family: sans-serif;
+    font-weight: normal;
+    padding-bottom:0px;
+}
+table {
+    margin: 5px;
+    background-color: white;
+    font-family: monospace;
+}
+
+input[type='text'], input[type='email']{
+    width: 95%;
+}
+
+table,
+td,
+tr {
+    /* border: 1.3px solid #aaa; */
+    border: 1.3px solid rgb(0, 166, 255);
+    border-collapse: collapse;
+    padding: 3px;
+}
+
+th {
+    background-color: lightgrey;
+    font-weight: normal;
+    border: 1px #aaa solid;
+}
+
+form{
+    width: inherit;
+}
+
+div#root {
+    /* background-color: lightgrey; */
+    background-color: rgb(0, 166, 255);
+    width: 350px;
+}
+
+.boxed {
+    /* border: 1.5px solid #aaa; */
+    /* border: 1.5px solid rgb(0, 166, 255); */
+    border: 1.5px solid black;
+    width: 315px;
+    margin: 10px;
+    /* background-color: #bababa; */
+    background-color: #090909;
+    display: inline-block;
+    border-radius: 5px;
+    padding-left: 5px;;
+    padding-right: 5px;
+    padding-top:0px;
+    padding-bottom: 5px;
+}
+
+.scroll{
+    height: 200px;
+    overflow: auto;
+}
+
+.small{
+    font-size:.7em;
+}
+
+.selected {
+    font-weight: bold;
+}
+
+table#customer-add-update tbody tr td.label{
+    text-align: right;
+}
+
+#customer-list, table#customer-add-update {
+    width: inherit;
+    margin:0px;
+    border: 0px;
+}
+
