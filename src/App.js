@@ -21,10 +21,20 @@ export function App(params) {
   let mode = (formObject.id >= 0) ? 'Update' : 'Add';   // MODE ternary to set form for UPDATE when customer index exists & ADD when -1 blank customer exists
   useEffect(() => { getCustomers() }, []);    // 1x action gets list of all customers for display when app started
 
-  const getCustomers =  function(){
+  //// Refactored for fetch call to REST API
+  // const getCustomers =  function(){
+  //   log("in getCustomers()");
+  //   setCustomers(getAll());
+  // }
+
+  const getCustomers =  function() {
     log("in getCustomers()");
-    setCustomers(getAll());
+    getAll(setCustomers);
   }
+
+
+
+
 
   const handleListClick = function(item){
     log("in handleListClick()");
