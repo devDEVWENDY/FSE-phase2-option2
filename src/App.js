@@ -70,7 +70,7 @@ export function App(params) {
 
   let onSaveClick = function () {
     if (mode === 'Add') {       // creates new customer & adds to customer array
-      post(formObject);
+      post(formObject, setCustomers);
     }
     if (mode === 'Update') {
       put(formObject.id, formObject);
