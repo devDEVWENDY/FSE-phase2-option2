@@ -48,8 +48,6 @@ export async function getAll(setCustomers) {
 
 
 
-
-
 export function get(id) {
     let result = null;
     for( let item of items){
@@ -60,6 +58,7 @@ export function get(id) {
   return result;
 }
 
+
 //// DELETE a customer
 export function deleteById(id) {
   let arrayIndex = getArrayIndexForId(id);
@@ -68,12 +67,17 @@ export function deleteById(id) {
   }
 }
 
+
 //// POST to create a new customer
 export function post(item) {      // adds new customer
   let nextid = getNextId();       // get id for new customer
   item.id = nextid;
   items[items.length] = item;     // add new customer to customers array
 }
+
+
+
+
 
 //// PUT to edit/update a current customer
 export function put(id, item) {
