@@ -69,11 +69,44 @@ export function deleteById(id) {
 
 
 //// POST to create a new customer
-export function post(item) {      // adds new customer
-  let nextid = getNextId();       // get id for new customer
-  item.id = nextid;
-  items[items.length] = item;     // add new customer to customers array
+// export function post(item) {      // adds new customer
+//   let nextid = getNextId();       // get id for new customer
+//   item.id = nextid;
+//   items[items.length] = item;     // add new customer to customers array
+// }
+
+
+export async function post(customerData, setCustomers) {
+  const myInit = {
+    method: 'POST',
+    mode: 'cors'};
+  const fetchData = async (url) => {
+    try {
+      const response = await fetch(url, myInit);
+      if (!response.ok) {
+        throw new Error(`Error creating customer: ${response.status}`);
+      }
+      const data = await response.json();
+      setCustomers(data);
+    } catch (error) {
+      alert(error);
+    }
+  };
+
+  fetchData(baseURL);
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
