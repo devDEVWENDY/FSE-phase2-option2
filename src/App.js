@@ -1,6 +1,7 @@
 // import React from 'react';
 // import customers from './memdb.js'
-import { getAll, post, put, deleteById } from './memdb.js';
+// import { getAll, post, put, deleteById } from './memdb.js';
+import { getAll, post, put, deleteById } from './restdb.js';
 import CustomerList from './components/CustomerList.js';
 import './App.css';
 import React, {useState, useEffect} from 'react';
@@ -72,6 +73,9 @@ export function App(params) {
 
       <div> <CustomerList customers={customers} formObject={formObject} handleListClick={handleListClick} /></div>
       
+
+
+  {/* 
       <div> <AddUpdateForm
                 mode={mode}
                 handleInputChange={handleInputChange}
@@ -81,6 +85,11 @@ export function App(params) {
                 onCancelClick={onCancelClick}
             />
       </div>
+  */}
+
+
+
+
 
       {/*  
       <div className="boxed">
@@ -130,6 +139,7 @@ export function App(params) {
         </form>
       </div>
        */}
+
     </div>
   );
 }
